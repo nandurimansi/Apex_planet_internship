@@ -1,0 +1,47 @@
+.main_page {
+  background-image: url(https://img.freepik.com/free-photo/flat-lay-workstation-with-copy-space-laptop_23-2148430879.jpg?semt=ais_hybrid&w=740&q=80);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  max-width: 60%;
+}
+.studies_page {
+  background-image: url(https://media.istockphoto.com/id/2157235978/vector/dark-blue-abstract-wave-pattern.jpg?s=612x612&w=0&k=20&c=sfBHwYf5E-ZdJpTsQ7zXJzRnscFiP2W_sHqSFGL-AkA=);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  max-width: 70%;
+}
+.experience_page {
+  background-image: url(https://img.freepik.com/free-vector/modern-desktop-background-geometric-blue-design-vector_53876-135923.jpg?semt=ais_hybrid&w=740&q=80);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  max-width: 70%;
+}
+h1 {
+  font-size: 40px;
+  text-align: left;
+}
+#about {
+  text-align: left;
+}
+#about a {
+  color: #ffffff;
+}
+#about a:hover {
+  color: #0d43e4;
+}
+h4 {
+  text-align: left;
+}
+.images {
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.para {
+    margin-left: 10px;
+}
