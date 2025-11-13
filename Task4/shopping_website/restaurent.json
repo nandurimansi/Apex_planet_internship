@@ -1,0 +1,130 @@
+[
+  {
+    "id": "r1",
+    "name": "Spice Villa",
+    "image": "https://content.jdmagicbox.com/comp/katihar/t9/9999p6452.6452.231114114353.i1t9/catalogue/spice-villa-katihar-indian-restaurants-ljeeqzrdoi.jpg",
+    "cuisine": ["Indian", "North Indian"],
+    "rating": 4.4,
+    "price_level": 2,
+    "delivery_estimate": 35,
+    "location": "Sector 1",
+    "description": "Homestyle Indian curries and tandoori delights.",
+    "menu": [
+      {"id":"m1","name":"Butter Chicken","description":"Creamy tomato gravy","price":220,"image":"","veg":false},
+      {"id":"m2","name":"Paneer Butter Masala","description":"Soft paneer cubes","price":200,"image":"","veg":true}
+    ],
+    "reviews":[{"user":"Asha","text":"Good food!"}]
+  },
+  {
+    "id": "r2",
+    "name": "Green Bowl",
+    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800",
+    "cuisine": ["Healthy","Salads"],
+    "rating": 4.2,
+    "price_level": 2,
+    "delivery_estimate": 25,
+    "location": "Sector 3",
+    "description": "Fresh salads and bowls.",
+    "menu":[
+      {"id":"m3","name":"Quinoa Salad","description":"Veggies & quinoa","price":180,"image":"","veg":true},
+      {"id":"m4","name":"Grilled Chicken Bowl","description":"Protein packed","price":240,"image":"","veg":false}
+    ],
+    "reviews":[{"user":"Ravi","text":"Fresh and tasty."}]
+  },
+  {
+    "id":"r3",
+    "name":"Pizza Point",
+    "image":"https://i.pinimg.com/736x/8d/28/42/8d2842e5aac00ece6c03b21e5e693a79.jpg",
+    "cuisine":["Italian","Pizza"],
+    "rating":4.6,
+    "price_level":2,
+    "delivery_estimate":30,
+    "location":"Sector 2",
+    "description":"Hand-tossed pizzas with fresh toppings.",
+    "menu":[
+      {"id":"m5","name":"Margherita Pizza","description":"Classic cheese","price":299,"image":"","veg":true},
+      {"id":"m6","name":"Pepperoni Pizza","description":"Spicy pepperoni","price":349,"image":"","veg":false}
+    ],
+    "reviews":[{"user":"Priya","text":"Best crust!"}]
+  },
+  {
+    "id":"r4",
+    "name":"Sushi Express",
+    "image":"https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800",
+    "cuisine":["Japanese","Sushi"],
+    "rating":4.1,
+    "price_level":3,
+    "delivery_estimate":45,
+    "location":"Sector 5",
+    "description":"Fresh sushi and rolls.",
+    "menu":[
+      {"id":"m7","name":"California Roll","description":"Crab & avocado","price":380,"image":"","veg":false},
+      {"id":"m8","name":"Veg Sushi","description":"Veg rolls","price":320,"image":"","veg":true}
+    ],
+    "reviews":[{"user":"Ken","text":"Nice flavors."}]
+  },
+  {
+    "id":"r5",
+    "name":"Burger Barn",
+    "image":"https://images.unsplash.com/photo-1550547660-d9450f859349?w=800",
+    "cuisine":["American","Burgers"],
+    "rating":4.3,
+    "price_level":1,
+    "delivery_estimate":20,
+    "location":"Sector 4",
+    "description":"Classic and gourmet burgers.",
+    "menu":[
+      {"id":"m9","name":"Cheese Burger","description":"Beef patty","price":179,"image":"","veg":false},
+      {"id":"m10","name":"Veggie Burger","description":"Plant-based patty","price":160,"image":"","veg":true}
+    ],
+    "reviews":[{"user":"Sam","text":"Good value."}]
+  },
+  {
+    "id":"r6",
+    "name":"Taco Town",
+    "image":"https://images.unsplash.com/photo-1544511916-0148ccdeb877?w=800",
+    "cuisine":["Mexican"],
+    "rating":4.0,
+    "price_level":1,
+    "delivery_estimate":28,
+    "location":"Sector 7",
+    "description":"Tasty tacos and sides.",
+    "menu":[
+      {"id":"m11","name":"Chicken Taco","description":"Spicy chicken","price":129,"image":"","veg":false},
+      {"id":"m12","name":"Veg Taco","description":"Beans & cheese","price":119,"image":"","veg":true}
+    ],
+    "reviews":[{"user":"Lina","text":"Spicy and good."}]
+  },
+  {
+    "id":"r7",
+    "name":"Noodle House",
+    "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvRqaVHap2RWoAEzvnZFfBlJsf8ys_kp4IDw&s",
+    "cuisine":["Chinese","Noodles"],
+    "rating":3.9,
+    "price_level":1,
+    "delivery_estimate":33,
+    "location":"Sector 6",
+    "description":"Quick noodles & stir fry.",
+    "menu":[
+      {"id":"m13","name":"Veg Hakka Noodles","description":"Classic style","price":150,"image":"","veg":true},
+      {"id":"m14","name":"Chicken Manchurian","description":"Saucy starter","price":180,"image":"","veg":false}
+    ],
+    "reviews":[{"user":"Amit","text":"Quick delivery."}]
+  },
+  {
+    "id":"r8",
+    "name":"Dessert Delights",
+    "image":"https://images.unsplash.com/photo-1505250469679-203ad9ced0cb?w=800",
+    "cuisine":["Desserts"],
+    "rating":4.7,
+    "price_level":1,
+    "delivery_estimate":25,
+    "location":"Sector 8",
+    "description":"Cakes, pastries and sweet treats.",
+    "menu":[
+      {"id":"m15","name":"Chocolate Cake Slice","description":"Rich chocolate","price":129,"image":"","veg":true},
+      {"id":"m16","name":"Ice Cream Sundae","description":"Choose toppings","price":99,"image":"","veg":true}
+    ],
+    "reviews":[{"user":"Maya","text":"Perfect desserts."}]
+  }
+]
