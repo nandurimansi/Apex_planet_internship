@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MegaMart - All Products</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="top-strip">
+      <div class="container top-strip-inner">
+        <span>Free delivery on orders above ₹499</span>
+        <span>Secure Payments</span>
+      </div>
+    </div>
+
+    <div class="main-header">
+      <div class="container main-header-inner">
+        <a href="index.html" class="logo">MegaMart</a>
+
+        <form class="header-search" onsubmit="event.preventDefault();">
+          <input
+            type="text"
+            class="header-search-input"
+            placeholder="Search for products, brands and more"
+          >
+          <button type="submit" class="header-search-btn">&#128269;</button>
+        </form>
+
+        <div class="header-actions">
+          <a href="about.html" class="header-link">
+            <span class="header-link-top">Hello, User</span>
+            <span class="header-link-bottom">About Us</span>
+          </a>
+          <a href="contact.html" class="header-link">
+            <span class="header-link-top">Need help?</span>
+            <span class="header-link-bottom">Contact</span>
+          </a>
+          <a href="cart.html" class="cart-icon-link">
+            <span class="cart-icon">&#128722;</span>
+            <span class="cart-text">Cart <span id="cart-count">(0)</span></span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <nav class="category-strip">
+      <div class="container category-strip-inner">
+        <a href="products.html" class="category-link active">All</a>
+        <a href="products.html" class="category-link">Electronics</a>
+        <a href="products.html" class="category-link">Accessories</a>
+        <a href="products.html" class="category-link">Gadgets</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="section">
+    <div class="container products-layout">
+      <!-- Sidebar filters -->
+      <aside class="filters-sidebar">
+        <h3>Filters</h3>
+
+        <div class="filter-block">
+          <p class="filter-title">Price</p>
+          <label>
+            <input type="checkbox" class="filter-price" value="under-1000">
+            Under ₹1,000
+          </label><br>
+          <label>
+            <input type="checkbox" class="filter-price" value="1000-2500">
+            ₹1,000 - ₹2,500
+          </label><br>
+          <label>
+            <input type="checkbox" class="filter-price" value="above-2500">
+            Above ₹2,500
+          </label>
+        </div>
+
+        <div class="filter-block">
+          <p class="filter-title">Customer Ratings</p>
+          <label>
+            <input type="checkbox" class="filter-rating" value="4plus">
+            4★ & above
+          </label><br>
+          <label>
+            <input type="checkbox" class="filter-rating" value="3plus">
+            3★ & above
+          </label>
+        </div>
+      </aside>
+
+      <!-- Main product grid -->
+      <section class="products-main">
+        <div class="products-header-row">
+          <h1>All Products</h1>
+          <span class="muted small-text">
+            Demo store &bull; Items stored in localStorage
+          </span>
+        </div>
+
+        <div class="products-grid all-products-grid">
+          <!-- JS will render products here -->
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; 2025 MegaMart. Demo only.</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js" defer></script>
+  <script src="/js/products.js" defer></script>
+</body>
+</html>

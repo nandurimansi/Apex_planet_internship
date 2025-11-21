@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MegaMart - Online Shopping</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <!-- Top strip -->
+    <div class="top-strip">
+      <div class="container top-strip-inner">
+        <span>Free delivery on orders above ₹499</span>
+        <span>Customer Support | Help</span>
+      </div>
+    </div>
+
+    <!-- Main header -->
+    <div class="main-header">
+      <div class="container main-header-inner">
+        <a href="index.html" class="logo">MegaMart</a>
+
+        <form class="header-search" onsubmit="event.preventDefault();">
+          <input
+            type="text"
+            class="header-search-input"
+            placeholder="Search for products, brands and more"
+          >
+          <button type="submit" class="header-search-btn">&#128269;</button>
+        </form>
+
+        <div class="header-actions">
+          <a href="about.html" class="header-link">
+            <span class="header-link-top">Hello, User</span>
+            <span class="header-link-bottom">About Us</span>
+          </a>
+          <a href="contact.html" class="header-link">
+            <span class="header-link-top">Need help?</span>
+            <span class="header-link-bottom">Contact</span>
+          </a>
+          <a href="cart.html" class="cart-icon-link">
+            <span class="cart-icon">&#128722;</span>
+            <span class="cart-text">Cart <span id="cart-count">(0)</span></span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category strip -->
+    <nav class="category-strip">
+      <div class="container category-strip-inner">
+        <a href="products.html" class="category-link active">All</a>
+        <a href="products.html" class="category-link">Mobiles</a>
+        <a href="products.html" class="category-link">Electronics</a>
+        <a href="products.html" class="category-link">Fashion</a>
+        <a href="products.html" class="category-link">Home</a>
+        <a href="products.html" class="category-link">Beauty</a>
+        <a href="products.html" class="category-link">Grocery</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero banner -->
+    <section class="hero-banner">
+      <div class="container hero-banner-inner">
+        <div class="hero-text">
+          <h1>Big Savings on Top Deals</h1>
+          <p>Shop electronics, fashion, home & more with amazing offers.</p>
+          <a href="products.html" class="btn btn-lg">Shop Now</a>
+        </div>
+        <div class="hero-image">
+          <!-- Optional image -->
+          <img src="images/hero-banner.jpg" alt="Shopping banner" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Deal strip -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Today’s Top Deals</h2>
+          <a href="products.html" class="view-all-link">View All &raquo;</a>
+        </div>
+        <div class="product-row" id="top-deals-row">
+          <!-- JS will insert horizontally scrollable cards -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Recommended section -->
+    <section class="section section-gray">
+      <div class="container">
+        <div class="section-header">
+          <h2>Recommended for You</h2>
+        </div>
+        <div class="products-grid featured-products">
+          <!-- JS: grid of products -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; 2025 MegaMart. This is a demo project.</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js" defer></script>
+  <script src="/js/products.js" defer></script>
+</body>
+</html>

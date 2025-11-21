@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MegaMart - Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="top-strip">
+      <div class="container top-strip-inner">
+        <span>Have questions? We’re happy to help (demo).</span>
+      </div>
+    </div>
+
+    <div class="main-header">
+      <div class="container main-header-inner">
+        <a href="index.html" class="logo">MegaMart</a>
+
+        <form class="header-search" onsubmit="event.preventDefault();">
+          <input
+            type="text"
+            class="header-search-input"
+            placeholder="Search for products"
+          >
+          <button type="submit" class="header-search-btn">&#128269;</button>
+        </form>
+
+        <div class="header-actions">
+          <a href="about.html" class="header-link">
+            <span class="header-link-top">Hello, User</span>
+            <span class="header-link-bottom">About Us</span>
+          </a>
+          <a href="contact.html" class="header-link">
+            <span class="header-link-top">Need help?</span>
+            <span class="header-link-bottom">Contact</span>
+          </a>
+          <a href="cart.html" class="cart-icon-link">
+            <span class="cart-icon">&#128722;</span>
+            <span class="cart-text">Cart <span id="cart-count">(0)</span></span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <nav class="category-strip">
+      <div class="container category-strip-inner">
+        <a href="products.html" class="category-link">Shop</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="section">
+    <div class="container contact-layout">
+      <div class="contact-card">
+        <h1>Contact Us</h1>
+        <p class="muted small-text">
+          This is a demo form. It will validate input but will not send data.
+        </p>
+
+        <form id="contact-form" class="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Name<span class="required">*</span></label>
+            <input type="text" id="name" name="name" required>
+            <small class="error-message" id="name-error"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email<span class="required">*</span></label>
+            <input type="email" id="email" name="email" required>
+            <small class="error-message" id="email-error"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message<span class="required">*</span></label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <small class="error-message" id="message-error"></small>
+          </div>
+
+          <button type="submit" class="btn btn-lg">Submit</button>
+          <p id="form-success-message" class="success-message"></p>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; 2025 MegaMart. Demo only.</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js" defer></script>
+</body>
+</html>
