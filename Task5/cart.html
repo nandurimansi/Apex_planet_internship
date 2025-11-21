@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MegaMart - Cart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="top-strip">
+      <div class="container top-strip-inner">
+        <span>Secure checkout & easy returns</span>
+      </div>
+    </div>
+
+    <div class="main-header">
+      <div class="container main-header-inner">
+        <a href="index.html" class="logo">MegaMart</a>
+
+        <form class="header-search" onsubmit="event.preventDefault();">
+          <input
+            type="text"
+            class="header-search-input"
+            placeholder="Search for products"
+          >
+          <button type="submit" class="header-search-btn">&#128269;</button>
+        </form>
+
+        <div class="header-actions">
+          <a href="about.html" class="header-link">
+            <span class="header-link-top">Hello, User</span>
+            <span class="header-link-bottom">About Us</span>
+          </a>
+          <a href="contact.html" class="header-link">
+            <span class="header-link-top">Need help?</span>
+            <span class="header-link-bottom">Contact</span>
+          </a>
+          <a href="cart.html" class="cart-icon-link">
+            <span class="cart-icon">&#128722;</span>
+            <span class="cart-text">Cart <span id="cart-count">(0)</span></span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <nav class="category-strip">
+      <div class="container category-strip-inner">
+        <a href="products.html" class="category-link">Continue Shopping</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="section">
+    <div class="container cart-layout">
+      <section class="cart-items-section">
+        <h1>Your Cart</h1>
+        <p id="empty-cart-message" class="muted">
+          Your cart is empty. <a href="products.html">Browse products</a>.
+        </p>
+
+        <div class="cart-table-wrapper">
+          <table class="cart-table">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Qty</th>
+                <th>Subtotal</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="cart-items">
+              <!-- JS will fill -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <aside class="cart-summary-card">
+        <h2>Price Details</h2>
+        <div class="summary-row">
+          <span>Price</span>
+          <span id="cart-price">₹0</span>
+        </div>
+        <div class="summary-row">
+          <span>Discount</span>
+          <span class="discount-text">- ₹0</span>
+        </div>
+        <div class="summary-row">
+          <span>Delivery Charges</span>
+          <span class="delivery-text">Free</span>
+        </div>
+        <hr>
+        <div class="summary-row summary-total">
+          <span>Total Amount</span>
+          <span id="cart-total">₹0</span>
+        </div>
+        <button class="btn btn-lg summary-btn" id="checkout-btn" disabled>
+          Place Order (Demo)
+        </button>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; 2025 MegaMart. Demo only.</p>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+  <script src="cart.js" defer></script>
+</body>
+</html>

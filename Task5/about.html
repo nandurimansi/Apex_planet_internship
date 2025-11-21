@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MegaMart - About</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="top-strip">
+      <div class="container top-strip-inner">
+        <span>Demo e-commerce project</span>
+      </div>
+    </div>
+
+    <div class="main-header">
+      <div class="container main-header-inner">
+        <a href="index.html" class="logo">MegaMart</a>
+
+        <form class="header-search" onsubmit="event.preventDefault();">
+          <input
+            type="text"
+            class="header-search-input"
+            placeholder="Search for products"
+          >
+          <button type="submit" class="header-search-btn">&#128269;</button>
+        </form>
+
+        <div class="header-actions">
+          <a href="about.html" class="header-link">
+            <span class="header-link-top">Hello, User</span>
+            <span class="header-link-bottom">About Us</span>
+          </a>
+          <a href="contact.html" class="header-link">
+            <span class="header-link-top">Need help?</span>
+            <span class="header-link-bottom">Contact</span>
+          </a>
+          <a href="cart.html" class="cart-icon-link">
+            <span class="cart-icon">&#128722;</span>
+            <span class="cart-text">Cart <span id="cart-count">(0)</span></span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <nav class="category-strip">
+      <div class="container category-strip-inner">
+        <a href="products.html" class="category-link">Shop</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="section">
+    <div class="container about-page">
+      <div class="about-card">
+        <h1>About MegaMart</h1>
+        <p>
+          MegaMart is a <strong>demo online shopping website</strong> built
+          as a capstone project using only HTML, CSS and JavaScript.
+        </p>
+        <p>
+          It includes a home page, product listing, shopping cart with
+          <code>localStorage</code>, contact form validation and a responsive
+          layout inspired by modern e-commerce sites.
+        </p>
+        <p>
+          Use this project to practice:
+        </p>
+        <ul>
+          <li>Layout with Flexbox and CSS Grid</li>
+          <li>Dynamic DOM updates</li>
+          <li>State management using <code>localStorage</code></li>
+          <li>Performance and responsive design</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; 2025 MegaMart. Demo only.</p>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
