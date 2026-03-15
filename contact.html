@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>MegaMart - Contact</title>
+  <meta name="description" content="Get in touch with MegaMart. We're here to help with your queries.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="top-strip">
+      <div class="container top-strip-inner">
+        <span>🚚 Free delivery on orders above ₹499</span>
+        <span>🔒 Secure Payments &bull; 24/7 Support</span>
+      </div>
+    </div>
+
+    <div class="main-header">
+      <div class="container main-header-inner">
+        <a href="index.html" class="logo">MegaMart</a>
+
+        <form class="header-search" onsubmit="event.preventDefault();">
+          <input type="text" class="header-search-input" placeholder="Search for products, brands and more...">
+          <button type="submit" class="header-search-btn">&#128269;</button>
+        </form>
+
+        <div class="header-actions">
+          <a href="about.html" class="header-link">
+            <span class="header-link-top">Hello, User</span>
+            <span class="header-link-bottom">About Us</span>
+          </a>
+          <a href="contact.html" class="header-link">
+            <span class="header-link-top">Need help?</span>
+            <span class="header-link-bottom">Contact</span>
+          </a>
+          <a href="cart.html" class="cart-icon-link">
+            <span class="cart-icon">&#128722;</span>
+            <span class="cart-text">Cart <span id="cart-count">(0)</span></span>
+          </a>
+          <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">☰</button>
+        </div>
+      </div>
+    </div>
+
+    <nav class="category-strip">
+      <div class="container category-strip-inner">
+        <a href="index.html" class="category-link active">Home</a>
+        <a href="products.html" class="category-link">All</a>
+        <a href="products.html" class="category-link">Mobiles</a>
+        <a href="products.html" class="category-link">Electronics</a>
+        <a href="products.html" class="category-link">Fashion</a>
+        <a href="products.html" class="category-link">Beauty</a>
+        <a href="products.html" class="category-link">Grocery</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="section">
+    <div class="container contact-layout">
+      <div class="contact-card reveal">
+        <h1>Contact Us</h1>
+        <p class="muted small-text">
+          This is a demo form. It will validate input but will not send data.
+        </p>
+
+        <form id="contact-form" class="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Name<span class="required">*</span></label>
+            <input type="text" id="name" name="name" required>
+            <small class="error-message" id="name-error"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email<span class="required">*</span></label>
+            <input type="email" id="email" name="email" required>
+            <small class="error-message" id="email-error"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message<span class="required">*</span></label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <small class="error-message" id="message-error"></small>
+          </div>
+
+          <button type="submit" class="btn btn-lg">Send Message →</button>
+          <p id="form-success-message" class="success-message"></p>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="logo">MegaMart</a>
+          <p>Your one-stop destination for the best deals on electronics, gadgets, and everyday essentials.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Customer Service</h4>
+          <ul>
+            <li><a href="cart.html">My Cart</a></li>
+            <li><a href="contact.html">Help Center</a></li>
+            <li><a href="#">Returns Policy</a></li>
+            <li><a href="#">Track Order</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="#">📧 support@megamart.com</a></li>
+            <li><a href="#">📞 1800-123-4567</a></li>
+            <li><a href="#">📍 Bangalore, India</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 MegaMart. Demo only.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+
+</html>
