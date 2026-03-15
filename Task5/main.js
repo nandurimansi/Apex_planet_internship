@@ -1,5 +1,6 @@
 // main.js
 // Shared cart helpers + navbar cart count + contact form validation
+// + toast notifications + scroll-reveal + mobile menu
 
 const CART_KEY = "megamart-cart";
 
@@ -32,6 +33,34 @@ function updateCartCount() {
   span.textContent = `(${getCartCount()})`;
 }
 
+// Header search (used on home/other pages to navigate to products with a query)
+function handleHeaderSearch(event) {
+  if (event && typeof event.preventDefault === "function") {
+    event.preventDefault();
+  }
+
+  const input = document.querySelector(".header-search-input");
+  if (!input) return;
+
+  const term = input.value.trim();
+  if (!term) return;
+
+  const target = "products.html";
+  window.location.href = `${target}?q=${encodeURIComponent(term)}`;
+}
+
+// Toast notification
+function showToast(message) {
+  const toast = document.getElementById("cart-toast");
+  if (!toast) return;
+  toast.textContent = message || "✓ Added to cart!";
+  toast.classList.add("show");
+  clearTimeout(toast._timer);
+  toast._timer = setTimeout(() => {
+    toast.classList.remove("show");
+  }, 2200);
+}
+
 // Add to cart (products array from products.js)
 function addToCart(productId) {
   if (typeof products === "undefined") return;
@@ -57,6 +86,7 @@ function addToCart(productId) {
 
   saveCart(cart);
   updateCartCount();
+  showToast("✓ " + (products.find((x) => x.id === productId)?.name || "Item") + " added!");
 }
 
 // Contact form validation
@@ -106,10 +136,8 @@ function setupContactForm() {
     }
 
     if (valid) {
-      // 👉 POPUP
       alert("Thank you! Your message has been received (demo only).");
 
-      // optional: also show the line below form if you want
       if (successMsg) {
         successMsg.style.display = "block";
       }
@@ -119,7 +147,47 @@ function setupContactForm() {
   });
 }
 
+// Scroll reveal animation
+function setupScrollReveal() {
+  const revealElements = document.querySelectorAll(".reveal");
+  if (!revealElements.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
+  );
+
+  revealElements.forEach((el) => observer.observe(el));
+}
+
+// Mobile menu toggle (shows/hides header links on mobile)
+function setupMobileMenu() {
+  const btn = document.getElementById("mobile-menu-btn");
+  if (!btn) return;
+
+  btn.addEventListener("click", () => {
+    const actions = btn.closest(".header-actions");
+    const links = actions
+      ? actions.querySelectorAll(".header-link")
+      : [];
+    links.forEach((link) => {
+      const isHidden =
+        getComputedStyle(link).display === "none";
+      link.style.display = isHidden ? "block" : "";
+    });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   updateCartCount();
   setupContactForm();
+  setupScrollReveal();
+  setupMobileMenu();
 });

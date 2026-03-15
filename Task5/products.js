@@ -250,6 +250,13 @@ function setupSearchAndFilters() {
   const productsGrid = document.querySelector(".all-products-grid");
   if (!productsGrid) return; // not on products page
 
+  // If the user came from the home page search, apply the ?q= query to the search field
+  const urlParams = new URLSearchParams(window.location.search);
+  const queryTerm = urlParams.get("q")?.trim();
+  if (searchInput && queryTerm) {
+    searchInput.value = queryTerm;
+  }
+
   function updateGrid() {
     const filtered = getFilteredProducts();
     renderProductGrid(".all-products-grid", filtered);

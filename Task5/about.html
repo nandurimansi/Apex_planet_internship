@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>MegaMart - About</title>
+  <meta name="description"
+    content="Learn about MegaMart — a demo e-commerce project built with HTML, CSS and JavaScript.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <header class="site-header">
     <div class="top-strip">
       <div class="container top-strip-inner">
-        <span>Demo e-commerce project</span>
+        <span>🚚 Free delivery on orders above ₹499</span>
+        <span>🔒 Secure Payments &bull; 24/7 Support</span>
       </div>
     </div>
 
@@ -18,12 +23,8 @@
       <div class="container main-header-inner">
         <a href="index.html" class="logo">MegaMart</a>
 
-        <form class="header-search" onsubmit="event.preventDefault();">
-          <input
-            type="text"
-            class="header-search-input"
-            placeholder="Search for products"
-          >
+        <form class="header-search" onsubmit="handleHeaderSearch(event)">
+          <input type="text" class="header-search-input" placeholder="Search for products, brands and more...">
           <button type="submit" class="header-search-btn">&#128269;</button>
         </form>
 
@@ -40,20 +41,27 @@
             <span class="cart-icon">&#128722;</span>
             <span class="cart-text">Cart <span id="cart-count">(0)</span></span>
           </a>
+          <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">☰</button>
         </div>
       </div>
     </div>
 
     <nav class="category-strip">
       <div class="container category-strip-inner">
-        <a href="products.html" class="category-link">Shop</a>
+        <a href="index.html" class="category-link active">Home</a>
+        <a href="products.html" class="category-link">All</a>
+        <a href="products.html" class="category-link">Mobiles</a>
+        <a href="products.html" class="category-link">Electronics</a>
+        <a href="products.html" class="category-link">Fashion</a>
+        <a href="products.html" class="category-link">Beauty</a>
+        <a href="products.html" class="category-link">Grocery</a>
       </div>
     </nav>
   </header>
 
   <main class="section">
     <div class="container about-page">
-      <div class="about-card">
+      <div class="about-card reveal">
         <h1>About MegaMart</h1>
         <p>
           MegaMart is a <strong>demo online shopping website</strong> built
@@ -78,11 +86,46 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-content">
-      <p>&copy; 2025 MegaMart. Demo only.</p>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="logo">MegaMart</a>
+          <p>Your one-stop destination for the best deals on electronics, gadgets, and everyday essentials.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Customer Service</h4>
+          <ul>
+            <li><a href="cart.html">My Cart</a></li>
+            <li><a href="contact.html">Help Center</a></li>
+            <li><a href="#">Returns Policy</a></li>
+            <li><a href="#">Track Order</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="#">📧 support@megamart.com</a></li>
+            <li><a href="#">📞 1800-123-4567</a></li>
+            <li><a href="#">📍 Bangalore, India</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 MegaMart. Demo only.</p>
+      </div>
     </div>
   </footer>
 
   <script src="main.js" defer></script>
 </body>
+
 </html>

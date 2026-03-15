@@ -1,5 +1,5 @@
 // cart.js
-// Cart page: render, update qty, remove items
+// Cart page: render, update qty, remove items, place order
 
 function removeCartItem(productId) {
   const cart = getCart().filter((item) => item.id !== productId);
@@ -12,6 +12,15 @@ function updateCartItemQuantity(productId, qty) {
   if (!item) return;
   item.qty = qty;
   saveCart(cart);
+}
+
+function placeOrder() {
+  const cart = getCart();
+  if (cart.length === 0) return;
+  alert("Order placed successfully! Thank you for shopping with MegaMart.");
+  saveCart([]);
+  renderCart();
+  updateCartCount();
 }
 
 function renderCart() {
@@ -35,7 +44,10 @@ function renderCart() {
   }
 
   emptyMsg.style.display = "none";
-  if (checkoutBtn) checkoutBtn.disabled = false;
+  if (checkoutBtn) {
+    checkoutBtn.disabled = false;
+    checkoutBtn.onclick = placeOrder;
+  }
 
   let rowsHtml = "";
   let total = 0;
@@ -100,3 +112,4 @@ function renderCart() {
 document.addEventListener("DOMContentLoaded", function () {
   renderCart();
 });
+
